@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="559.0" prefWidth="769.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefWidth="676.0" style="-fx-background-color: #c7c7c7;" VBox.vgrow="ALWAYS">
+         <children>
+            <ProgressBar prefHeight="29.0" prefWidth="769.0" progress="0.62" style="-fx-accent: #204357;" />
+            <Label layoutX="643.0" layoutY="455.0" text="Your WPM" textFill="#9f9f9f">
+               <font>
+                  <Font name="Trebuchet MS Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="673.0" layoutY="491.0" text="0" textAlignment="CENTER" textFill="#42698d">
+               <font>
+                  <Font name="Trebuchet MS Bold" size="24.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="396.0" layoutX="22.0" layoutY="36.0" stroke="BLACK" strokeType="INSIDE" width="671.0" />
+            <ImageView fitHeight="61.0" fitWidth="59.0" layoutX="702.0" layoutY="29.0">
+               <image>
+                  <Image url="@../../../img/health.png" />
+               </image>
+            </ImageView>
+            <TextField layoutX="23.0" layoutY="455.0" prefHeight="75.0" prefWidth="568.0" promptText="Type words here...">
+               <font>
+                  <Font name="Trebuchet MS" size="21.0" />
+               </font>
+            </TextField>
+            <ImageView layoutX="606.0" layoutY="186.0" rotate="-90.0">
+               <image>
+                  <Image url="@../../../img/spaceship.png" />
+               </image>
+            </ImageView>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
