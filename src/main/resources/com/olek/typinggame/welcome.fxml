@@ -26,7 +26,7 @@
             <DropShadow />
          </effect>
       </Button>
-      <Button layoutX="345.0" layoutY="316.0" mnemonicParsing="false" text="Normal" textAlignment="CENTER">
+      <Button fx:id="normalDiff" layoutX="345.0" layoutY="316.0" mnemonicParsing="false" onAction="#switchToGameNormal" text="Normal" textAlignment="CENTER">
          <font>
             <Font name="Trebuchet MS Bold" size="16.0" />
          </font>
@@ -34,7 +34,7 @@
             <DropShadow />
          </effect>
       </Button>
-      <Button layoutX="450.0" layoutY="316.0" mnemonicParsing="false" text="Hard" textAlignment="CENTER">
+      <Button fx:id="hardDiff" layoutX="450.0" layoutY="316.0" mnemonicParsing="false" onAction="#switchToGameHard" text="Hard" textAlignment="CENTER">
          <font>
             <Font name="Trebuchet MS Bold" size="16.0" />
          </font>

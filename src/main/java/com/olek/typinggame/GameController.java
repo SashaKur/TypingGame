@@ -38,7 +38,7 @@ public class GameController implements Initializable {
         gameView.setClip(clip);
 
         List<String> allWords = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader("S:\\Repositories\\TypingGame\\src\\main\\resources\\wordlist.csv"))){
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/wordlist.csv"))){
             String line;
 
             while((line = reader.readLine())!=null) {
@@ -55,28 +55,34 @@ public class GameController implements Initializable {
 
     }
 
-    public void enterText(ActionEvent e){
+    public void enterText(ActionEvent e) {
         String text = textField.getText();
         System.out.println(text);
         spawnWord(text);
     }
 
-    public void spawnWord(String text){
-        TranslateTransition transition = new TranslateTransition();
-
+    public void spawnWord(String text) {
         Label word = new Label(randomWords.pop());
 
         word.setFont(Font.font("Trebuchet MS", FontWeight.BOLD, 18));
         word.setTextFill(Color.WHITE);
 
-        word.setLayoutX(-100);
-        word.setLayoutY(10);
-
-        transition.setNode(word);
-        transition.setByX(700);
-        transition.setDuration(Duration.millis(10000));
-        transition.play();
+        word.setLayoutX(100);
+        word.setLayoutY(getRandomYPosition());
 
         gameView.getChildren().add(word);
+    }
+
+    public int getRandomYPosition(){
+        double maxHeight = gameView.getHeight();
+
+        return (int)(Math.random()*((int)((maxHeight+40)/40)))*40;
+    }
+
+    public int calculateWPM(int charCount, int secondsElapsed){
+        double words = charCount/5.0;
+        double minutes = secondsElapsed/60.0;
+
+        return (int)(words/minutes);
     }
 }
